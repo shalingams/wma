@@ -186,52 +186,24 @@
             <!-- subscriptions -->
             <div class="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-12  md:space-y-0 justify-center  mt-10">
                 <div class="flex flex-col p-8 rounded-xl bg-white shadow-xl w-96 md:w-auto">
-                    <div class="mt-3 font-semibold text-lg">Non-Subscription</div>
-                    <!-- <div class="text-sm font-light">Up to 100Mbit/s</div> -->
-                    <div class="my-4">
-                        <!-- <span class="font-bold text-base">299,-</span> -->
-                        <p class="pt-2 font-light text-sm">Benefit 1</p>
-                        <p class="pt-2 font-light text-sm">Benefit 2</p>
-                        <p class="pt-2 font-light text-sm">Benefit 3</p>
-                    </div>
-
-                    <button class="bg-[#F4F5FA] px-4 py-3 rounded-full  border border-[#F0F0F6] shadow-xl mt-4">
-                        Apply for membership
-                    </button>
+                    <div class="mt-3 font-semibold text-lg">Membership</div>
+                    <p>Joining the WMA opens the door to a world of opportunities. Members enjoy access to
+                        exclusive events, industry insights, and a supportive community of like-minded individuals. Whether you are
+                        a seasoned performer, an aspiring artist, or a dedicated fan, the WMA offers something for everyone.</p>
                 </div>
 
                 <div class="flex flex-col p-8 rounded-xl bg-white shadow-xl w-96 md:w-auto">
-                    <div class="mt-3 font-semibold text-lg">Subscription</div>
-                    <div class="my-4">
-                        <p class="pt-2 font-light text-sm">Benefit 1</p>
-                        <p class="pt-2 font-light text-sm">Benefit 2</p>
-                        <p class="pt-2 font-light text-sm">Benefit 3</p>
-                        <p class="pt-2 font-light text-sm">Benefit 4</p>
-                    </div>
-
-                    <button class="bg-[#F4F5FA] px-4 py-3 rounded-full  border border-[#F0F0F6] shadow-xl mt-4">
-                        Apply for membership
-                    </button>
-                </div>
-
-
-                <div class="flex flex-col p-8 rounded-xl bg-white shadow-xl w-96 md:w-auto">
-                    <div class="mt-3 font-semibold text-lg">Donor</div>
-                    <div class="my-4">
-                        <p class="pt-2 font-light text-sm">Benefit 1</p>
-                        <p class="pt-2 font-light text-sm">Benefit 2</p>
-                        <p class="pt-2 font-light text-sm">Benefit 3</p>
-                        <p class="pt-2 font-light text-sm">Benefit 4</p>
-                        <p class="pt-2 font-light text-sm">Benefit 5</p>
-
-                    </div>
-
-                    <button class="bg-[#F4F5FA] px-4 py-3 rounded-full  border border-[#F0F0F6] shadow-xl mt-4">
-                        Apply for membership
-                    </button>
+                    <div class="mt-3 font-semibold text-lg">Get Involved</div>
+                    <p>We invite you to become a part of the Western Musicians' Association. By joining, you
+                        contribute to the preservation and evolution of Western music. Together, we can ensure that this beloved
+                        genre continues to captivate audiences around the world.</p>
                 </div>
             </div>
-
+            <div class="flex items-center justify-center">
+                <a href="/register" class="mt-5 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Apply for membership
+                </a>
+            </div>
         </div>
     </section>
 

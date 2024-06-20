@@ -15,6 +15,17 @@ class ProfileController extends Controller
     /**
      * Display the user's profile form.
      */
+    public function dashboard(Request $request): View
+    {
+        $qr = str_replace(' ', '', $request->user()->name . $request->user()->email . $request->user()->nic);
+        return view('dashboard', [
+            'user' => $request->user(),
+            'qr' => $qr
+        ]);
+    }
+    /**
+     * Display the user's profile form.
+     */
     public function edit(Request $request): View
     {
         $qr = str_replace(' ', '', $request->user()->name . $request->user()->email . $request->user()->nic);
@@ -56,6 +67,9 @@ class ProfileController extends Controller
         $request->user()->website = $data['website'];
         $request->user()->marital_status = $data['marital_status'];
         $request->user()->beneficiary = $data['beneficiary'];
+        if (strlen($request->user()->nic) > 0) {
+            $request->user()->qrcode = true;
+        }
         $request->user()->save();
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }

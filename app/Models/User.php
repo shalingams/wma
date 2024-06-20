@@ -34,6 +34,7 @@ class User extends Authenticatable
         'marital_status',
         'beneficiary',
         'qrcode',
+        'role'
     ];
 
     /**

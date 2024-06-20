@@ -17,11 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [ProfileController::class, 'dashboard'])->name('dashboard');
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::get('/password-reset', [ProfileController::class, 'password_reset'])->name('profile.password_reset');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

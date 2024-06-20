@@ -12,7 +12,7 @@
                     @include('profile.partials.update-profile-information-form')
                 </div>
                 <div class="relative">
-                    @if($qr)
+                    @if($user->qrcode)
                     <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(256)->style('dot')->gradient(255, 0, 0, 0, 0, 255, 'diagonal')->margin(1)->eye('circle')->generate($qr)) !!} ">
                     @endif
                 </div>
