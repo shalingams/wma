@@ -110,58 +110,30 @@
         <h2 class="text-6xl text-black uppercase">Upcoming Events</h2>
         <div>
 
-            <div class="flex mx-auto p-8 overflow-hidden bg-gray-700 shadow-2xl rounded-3xl">
+            <div class="flex mx-auto p-8 overflow-hidden bg-gray-700 shadow-2xl rounded-3xl ">
                 <div class="flow-root">
+
+                    @foreach ($events as $event)
                     <!-- component -->
-                    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-3">
+                    <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-6xl m-3 mb-6">
                         <div class="md:flex">
                             <div class="md:flex-shrink-0">
-                                <img class="h-48 w-full object-cover md:w-48" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Doctor's image">
+                                <img class="h-48 w-full object-cover md:w-48" src="/storage/{{$event->image_1}}" alt="{{$event->title}} image">
                             </div>
                             <div class="p-8">
-                                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Dr. John Doe</div>
-                                <p class="block mt-1 text-lg leading-tight font-medium text-black">Specialty: Cardiology</p>
-                                <p class="mt-2 text-gray-500">Available Time Slots:</p>
-                                <ul class="list-disc unlisted list-inside flex gap-3">
-                                    <li>10:00 - 11:00</li>
-                                    <li>13:00 - 14:00</li>
-                                    <li>16:00 - 17:00</li>
-                                </ul>
-                                <button class="mt-5 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                    Book Tickets
-                                </button>
+                                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{$event->title}}</div>
+                                <p class="block mt-1 text-lg leading-tight font-medium text-black">{{$event->event_date}}</p>
+                                <p class="block mt-1 text-lg leading-tight font-medium text-black">{!!$event->description!!}</p>
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
-                    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5">
-                        <div class="md:flex">
-                            <div class="md:flex-shrink-0">
-                                <img class="h-48 w-full object-cover md:w-48" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Event image">
-                            </div>
-                            <div class="p-8">
-                                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Event Name</div>
-                                <p class="block mt-1 text-lg leading-tight font-medium text-black">Event Description</p>
-                                <p class="mt-2 text-gray-500">Event Details...</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5">
-                        <div class="p-8 flex">
-                            <div class="pr-4">
-                                <p class="text-4xl font-bold">18th</p>
-                            </div>
-                            <div>
-                                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Event Name</div>
-                                <p class="mt-2 text-gray-500">Event Description</p>
-                                <p class="mt-2 text-gray-500">Event Details...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="mt-5 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+
+                    <a href="/events" class="mt-5 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         See All Events
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

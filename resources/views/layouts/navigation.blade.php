@@ -15,6 +15,18 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    @if (Auth::user()->role === "admin")
+                    <x-nav-link :href="route('admin.events')" :active="request()->routeIs('events')">
+                        Events
+                    </x-nav-link>
+                    <x-nav-link :href="route('news')" :active="request()->routeIs('news')">
+                        {{ __('News') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
+                        {{ __('Users') }}
+                    </x-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -71,6 +83,17 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            @if (Auth::user()->role === "admin")
+            <x-responsive-nav-link :href="route('admin.events')" :active="request()->routeIs('events')">
+                {{ __('Events') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('news')" :active="request()->routeIs('news')">
+                {{ __('News') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('users')" :active="request()->routeIs('users')">
+                {{ __('Users') }}
+            </x-responsive-nav-link>
+            @endif
         </div>
 
         <!-- Responsive Settings Options -->

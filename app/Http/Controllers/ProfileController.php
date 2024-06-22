@@ -12,17 +12,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class ProfileController extends Controller
 {
-    /**
-     * Display the user's profile form.
-     */
-    public function dashboard(Request $request): View
-    {
-        $qr = str_replace(' ', '', $request->user()->name . $request->user()->email . $request->user()->nic);
-        return view('dashboard', [
-            'user' => $request->user(),
-            'qr' => $qr
-        ]);
-    }
+
     /**
      * Display the user's profile form.
      */
